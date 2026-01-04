@@ -75,7 +75,7 @@ body {
 
 .eyebrow { 
     color: var(--accent); 
-    font-size: 18px; /* Larger school/major text */
+    font-size: 18px; 
     font-weight: 700; 
     text-transform: uppercase; 
     letter-spacing: 2.5px; 
@@ -84,7 +84,7 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(38px, 5.5vw, 62px); /* Size tweaked for single-line fit */
+    font-size: clamp(38px, 5.5vw, 62px); 
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 0;
@@ -117,7 +117,13 @@ h2 { font-size: clamp(32px, 5vw, 48px); font-weight: 600; letter-spacing: -0.01e
 .skill-category h4 { margin: 0 0 15px; font-size: 20px; color: var(--accent); }
 .skill-category ul { padding: 0; list-style: none; color: var(--text-secondary); }
 
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+/* Updated Project Grid for 4 Items */
+.project-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); 
+    gap: 30px; 
+}
+
 .project-card { background: var(--card-bg); border-radius: 28px; overflow: hidden; transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .project-card:hover { transform: scale(1.03); }
 .card-image-placeholder { height: 260px; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); }
