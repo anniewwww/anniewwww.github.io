@@ -7,53 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <header>
-        <h1>Your Name</h1>
-        <p>Mechanical Engineering | Aspiring Product Designer</p>
-        <nav>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Hi, I'm [Your Name].</h1>
+        <p class="subtitle">Developer & Designer.</p>
+    </section>
+
+    <section id="projects" class="container">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Project Title</h3>
-            <p><strong>Role:</strong> Your role</p>
-            <p><strong>Tools:</strong> CAD, SolidWorks, Python, etc.</p>
-            <p><strong>Summary:</strong> Short description of your contribution and outcome.</p>
-            <!-- Optional image -->
-            <img src="assets/project1.png" alt="Project Image">
-        </div>
-
-        <!-- Duplicate project divs as needed -->
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Position | Company</h3>
-            <p><strong>Duration:</strong> Jan 2024 – Present</p>
-            <p><strong>Key contributions:</strong> List 2–3 bullet points of impact</p>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>A brief description of the cool stuff you built.</p>
+                <a href="#" class="project-link">View on GitHub →</a>
+            </div>
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>Another impressive project with clean code.</p>
+                <a href="#" class="project-link">View on GitHub →</a>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-        <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
+    <section id="contact" class="container">
+        <h2>Get in Touch</h2>
+        <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
     </section>
-
-    <footer>
-        <p>© 2026 Your Name</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
