@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Annie Wang | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-mode">
 
     <nav class="navbar">
         <div class="nav-content">
@@ -16,34 +16,98 @@
                 <li><a href="resume.pdf" target="_blank">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="theme-toggle" class="theme-btn">
+                <span id="theme-icon">🌙</span>
+            </button>
         </div>
     </nav>
 
     <section id="home" class="hero">
-        <h1>Hi, I'm [Your Name].</h1>
-        <p class="subtitle">Developer & Designer.</p>
-    </section>
-
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>A brief description of the cool stuff you built.</p>
-                <a href="#" class="project-link">View on GitHub →</a>
+        <div class="hero-container fade-up">
+            <div class="hero-text">
+                <span class="eyebrow">Mechanical Engineering + CS @ UT Austin</span>
+                <h1>Hi, I'm Annie Wang!</h1>
+                <p class="tagline">I value <span class="highlight">honesty</span>, <span class="highlight">growth</span>, <span class="highlight">resilience</span>, and <span class="highlight">trust</span> to design solutions that improve lives.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">View My Work</a>
+                    <a href="#contact" class="btn-secondary">Let's Talk</a>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>Another impressive project with clean code.</p>
-                <a href="#" class="project-link">View on GitHub →</a>
+            
+            <div class="hero-image">
+                <img src="annie.jpg" alt="Annie Wang" class="profile-pic">
+                <div class="image-placeholder">Photo Placeholder</div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <h2>Get in Touch</h2>
-        <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    </section>
+    <div class="content-block">
+        
+        <section id="skills" class="container reveal">
+            <div class="section-header">
+                <h2>Technical Toolkit</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Mechanical</h4>
+                    <ul>
+                        <li>SolidWorks & Fusion 360</li>
+                        <li>GD&T & FEA Analysis</li>
+                        <li>Machine Elements</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Software</h4>
+                    <ul>
+                        <li>Python & C++</li>
+                        <li>Embedded Systems</li>
+                        <li>MATLAB / Simulink</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Fabrication</h4>
+                    <ul>
+                        <li>CNC Machining</li>
+                        <li>3D Printing (SLA/FDM)</li>
+                        <li>Laser Cutting</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <div class="section-header reveal">
+                <h2>Projects</h2>
+                <p>Engineering solutions through design and code.</p>
+            </div>
+            
+            <div class="project-grid">
+                <div class="project-card reveal">
+                    <div class="card-image-placeholder">CAD / FEA Analysis</div>
+                    <div class="card-content">
+                        <h3>Mechanical Optimization</h3>
+                        <p>Reduced assembly weight by 20% using iterative testing and SolidWorks simulations.</p>
+                        <a href="#" class="project-link">View Case Study →</a>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="card-image-placeholder">Manufacturing / CNC</div>
+                    <div class="card-content">
+                        <h3>Precision Fabrication</h3>
+                        <p>Designed and machined custom components using CNC toolpathing and manual lathes.</p>
+                        <a href="#" class="project-link">View Case Study →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container contact-section reveal">
+            <h2>Let's Get in Touch</h2>
+            <p>I'm happy to connect or chat about ways we can work together.</p>
+            <a href="mailto:annie.wang@utexas.edu" class="email-link">annie.wang@utexas.edu</a>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
