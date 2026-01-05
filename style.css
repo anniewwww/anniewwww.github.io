@@ -52,7 +52,16 @@ body {
 .nav-links a:hover { opacity: 1; }
 .theme-btn { background: none; border: none; cursor: pointer; font-size: 18px; }
 
-/* Hero Section */
+/* Shared Hero and Footer Headline Style */
+.hero h1, .hero-style-heading {
+    font-size: clamp(38px, 5.5vw, 62px); 
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin: 0;
+    white-space: nowrap; 
+}
+
+/* Hero Section specifics */
 .hero {
     min-height: 100vh;
     background-color: var(--hero-bg);
@@ -83,14 +92,6 @@ body {
     margin-bottom: 8px;
 }
 
-.hero h1 {
-    font-size: clamp(38px, 5.5vw, 62px); 
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    margin: 0;
-    white-space: nowrap; 
-}
-
 .tagline { font-size: clamp(18px, 2.5vw, 22px); color: var(--text-secondary); max-width: 600px; margin: 24px 0 40px; }
 .highlight { color: var(--text-main); font-weight: 600; }
 
@@ -107,72 +108,138 @@ body {
 .profile-pic { width: 100%; height: 100%; object-fit: cover; }
 .image-placeholder { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-secondary); pointer-events: none; }
 
+/* Buttons */
+.hero-buttons { display: flex; gap: 20px; }
+.btn-primary { background: var(--btn-bg); color: white; padding: 16px 32px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 18px; transition: 0.3s; }
+.btn-primary:hover { background: #0077ed; transform: translateY(-2px); }
+.btn-secondary { color: var(--btn-bg); text-decoration: none; font-size: 18px; padding: 16px 0; font-weight: 500; }
+.btn-secondary:hover { text-decoration: underline; }
+
 /* Content Blocks */
 .content-block { background-color: var(--content-bg); padding-top: 100px; transition: background-color 0.4s ease; }
-.container { max-width: 1100px; margin: 0 auto 140px; padding: 0 20px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 h2 { font-size: clamp(32px, 5vw, 48px); font-weight: 600; letter-spacing: -0.01em; margin-bottom: 40px; }
 
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+/* Grids */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 140px; }
 .skill-category { background: var(--card-bg); padding: 35px; border-radius: 24px; border: 1px solid var(--border); }
 .skill-category h4 { margin: 0 0 15px; font-size: 20px; color: var(--accent); }
 .skill-category ul { padding: 0; list-style: none; color: var(--text-secondary); }
 
-/* Project Grid & Interactive Cards */
-.project-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); 
-    gap: 30px; 
-}
-
-.project-card { 
-    background: var(--card-bg); 
-    border-radius: 28px; 
-    overflow: hidden; 
-    border: 1px solid var(--border);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                background-color 0.4s ease;
-}
-
-.project-card:hover { 
-    transform: translateY(-10px) scale(1.02); 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-    background-color: var(--hero-bg);
-}
-
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); gap: 30px; margin-bottom: 140px; }
+.project-card { cursor: pointer; background: var(--card-bg); border-radius: 28px; overflow: hidden; border: 1px solid var(--border); transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+.project-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 .card-image-placeholder { height: 260px; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); }
 .card-content { padding: 30px; }
+.project-link { display: inline-block; margin-top: 15px; color: var(--btn-bg); text-decoration: none; font-weight: 600; }
 
-.project-link { 
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--btn-bg); 
-    text-decoration: none; 
-    font-weight: 600; 
+/* --- Contact Footer Fixed --- */
+.contact-footer { 
+    background-color: var(--hero-bg); 
+    padding: 140px 0; 
+    text-align: center; 
 }
 
-.project-link:hover { text-decoration: underline; }
+.contact-footer h2 { margin-bottom: 20px; }
 
-.hero-buttons { display: flex; gap: 20px; }
-.btn-primary { background: var(--btn-bg); color: white; padding: 16px 32px; border-radius: 30px; text-decoration: none; font-weight: 500; font-size: 18px; }
-.btn-secondary { color: var(--btn-bg); text-decoration: none; font-size: 18px; padding: 16px 0; font-weight: 500; }
+.footer-tagline {
+    margin: 0 auto 40px; 
+    text-align: center;   
+    max-width: 550px;    
+}
 
-.contact-section { text-align: center; border-top: 1px solid var(--border); padding-top: 120px; }
-.email-link { font-size: clamp(24px, 5vw, 42px); color: var(--text-main); text-decoration: none; font-weight: 600; transition: color 0.3s; }
+.email-link { 
+    font-size: clamp(24px, 5vw, 42px); 
+    color: var(--text-main); 
+    text-decoration: none; 
+    font-weight: 600; 
+    transition: color 0.3s; 
+}
 .email-link:hover { color: var(--accent); }
+
+/* Modals */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); overflow-y: auto; }
+.modal-content { background: var(--content-bg); margin: 2% auto; padding: 60px; border-radius: 32px; max-width: 900px; width: 92%; min-height: 85vh; position: relative; animation: modalSlide 0.5s ease; }
+@keyframes modalSlide { from { transform: translateY(100px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.close { position: absolute; right: 30px; top: 20px; color: var(--text-secondary); font-size: 40px; cursor: pointer; }
+.modal-body { margin-top: 40px; font-size: 18px; line-height: 1.8; color: var(--text-secondary); }
+.modal-body p { margin-bottom: 25px; }
+.modal-body strong { color: var(--text-main); display: block; margin-top: 20px; }
 
 /* Animations */
 .fade-up { animation: fadeUp 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-
 .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1); }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 900px) {
     .hero-container { flex-direction: column-reverse; text-align: center; gap: 40px; }
-    .hero h1 { white-space: normal; } 
-    .hero-text { text-align: center; }
+    .hero h1, .hero-style-heading { white-space: normal; }
     .hero-image { flex: 0 0 280px; height: 280px; width: 280px; margin: 0 auto; }
     .hero-buttons { justify-content: center; }
     .project-grid { grid-template-columns: 1fr; }
 }
+
+/* Styling for the text block on the About Page */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.about-content h2 {
+    margin-top: 40px;
+    color: var(--text-main);
+}
+
+/* Optional: Highlight the active page in the nav */
+.nav-links a.active {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* --- Project Card Alignment Fix --- */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: var(--card-bg);
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%; /* Ensures all cards in a row are same height */
+}
+
+.card-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows content to expand to fill the card */
+}
+
+.card-content p {
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes the footer down */
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end; /* Aligns text to the right */
+    margin-top: auto; /* Forces to the bottom */
+}
+
+.project-link {
+    color: var(--btn-bg);
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-link {
+    transform: translateX(5px); /* Subtle arrow nudge on hover */
+}
+
+/* --- Keep all other CSS (Hero, Modals, Navbar) the same --- */

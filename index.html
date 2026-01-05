@@ -11,10 +11,11 @@
     <nav class="navbar">
         <div class="nav-content">
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">About Me</a></li> 
+                <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="resume.pdf" target="_blank">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
             <button id="theme-toggle" class="theme-btn">
                 <span id="theme-icon">🌙</span>
@@ -42,7 +43,6 @@
     </section>
 
     <div class="content-block">
-        
         <section id="skills" class="container reveal">
             <div class="section-header">
                 <h2>Technical Skills</h2>
@@ -78,55 +78,69 @@
         <section id="projects" class="container">
             <div class="section-header reveal">
                 <h2>Projects</h2>
-                <p>Engineering solutions through design and code.</p>
             </div>
             
             <div class="project-grid">
-                <div class="project-card reveal">
+                <div class="project-card reveal" onclick="openModal('modal1')">
                     <div class="card-image-placeholder">CAD / FEA Analysis</div>
                     <div class="card-content">
                         <h3>Mechanical Optimization</h3>
-                        <p>Reduced assembly weight by 20% using iterative testing and SolidWorks simulations.</p>
-                        <a href="#" class="project-link">Learn More →</a>
+                        <p>Reduced assembly weight by 20% using SolidWorks simulations.</p>
+                        <a href="javascript:void(0)" class="project-link">Learn More →</a>
                     </div>
                 </div>
 
-                <div class="project-card reveal">
+                <div class="project-card reveal" onclick="openModal('modal2')">
                     <div class="card-image-placeholder">Manufacturing / CNC</div>
                     <div class="card-content">
                         <h3>Precision Fabrication</h3>
-                        <p>Designed and machined custom components using CNC toolpathing and manual lathes.</p>
-                        <a href="#" class="project-link">Learn More →</a>
+                        <p>Designed and machined custom components using CNC toolpathing.</p>
+                        <a href="javascript:void(0)" class="project-link">Learn More →</a>
                     </div>
                 </div>
 
-                <div class="project-card reveal">
+                <div class="project-card reveal" onclick="openModal('modal3')">
                     <div class="card-image-placeholder">Robotics / Embedded</div>
                     <div class="card-content">
                         <h3>Autonomous Rover</h3>
-                        <p>Integrated C++ motor controls with sensor feedback for real-time obstacle avoidance.</p>
-                        <a href="#" class="project-link">Learn More →</a>
+                        <p>Integrated C++ motor controls with sensor feedback for obstacle avoidance.</p>
+                        <a href="javascript:void(0)" class="project-link">Learn More →</a>
                     </div>
                 </div>
 
-                <div class="project-card reveal">
+                <div class="project-card reveal" onclick="openModal('modal4')">
                     <div class="card-image-placeholder">Product Design</div>
                     <div class="card-content">
                         <h3>Consumer Prototype</h3>
-                        <p>Developed a market-ready prototype focused on ergonomics and ease of manufacturing.</p>
-                        <a href="#" class="project-link">Learn More →</a>
+                        <p>Developed a market-ready prototype focused on ergonomics.</p>
+                        <a href="javascript:void(0)" class="project-link">Learn More →</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="contact" class="container contact-section reveal">
-            <h2>Let's Get in Touch</h2>
-            <p>I'm always open to discussing new projects or opportunities.</p>
-            <a href="mailto:annie.wang@utexas.edu" class="email-link">annie.wang@utexas.edu</a>
-        </section>
     </div>
 
+    <section id="contact" class="contact-footer reveal">
+        <div class="container">
+            <span class="eyebrow">Available for Opportunities</span>
+            <h2 class="hero-style-heading">Let's Get in Touch</h2>
+            <p class="tagline footer-tagline">I'm always open to discussing new projects, design challenges, or engineering opportunities.</p>
+            <a href="mailto:annie.wang@utexas.edu" class="email-link">annie.wang@utexas.edu</a>
+        </div>
+    </section>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <span class="eyebrow">Technical Case Study</span>
+            <h2>Mechanical Optimization</h2>
+            <div class="modal-body">
+                <p><strong>Overview:</strong> Optimization of an aerospace mounting bracket where weight reduction was critical for fuel efficiency.</p>
+                <p><strong>Methodology:</strong> Using SolidWorks Simulation, I performed topology optimization to remove material from low-stress zones.</p>
+                <p><strong>Results:</strong> The part was 24% lighter than the baseline with a 1.62 safety factor, validated through physical testing.</p>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
